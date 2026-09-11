@@ -1,0 +1,169 @@
+{
+  "Header": {
+    "GenerationSoftware": {
+      "Vendor": "KiCad",
+      "Application": "Pcbnew",
+      "Version": "9.0.3"
+    },
+    "CreationDate": "2026-09-11T15:28:53+03:00"
+  },
+  "GeneralSpecs": {
+    "ProjectId": {
+      "Name": "motor_controller",
+      "GUID": "6d6f746f-725f-4636-9f6e-74726f6c6c65",
+      "Revision": "rev?"
+    },
+    "Size": {
+      "X": 92.15,
+      "Y": 62.85
+    },
+    "LayerNumber": 4,
+    "BoardThickness": 1.6,
+    "Finish": "None"
+  },
+  "DesignRules": [
+    {
+      "Layers": "Outer",
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.2,
+      "TrackToRegion": 0.5,
+      "RegionToRegion": 0.5
+    },
+    {
+      "Layers": "Inner",
+      "PadToPad": 0.0,
+      "PadToTrack": 0.0,
+      "TrackToTrack": 0.2,
+      "TrackToRegion": 0.5,
+      "RegionToRegion": 0.5
+    }
+  ],
+  "FilesAttributes": [
+    {
+      "Path": "motor_controller-F_Cu.gbr",
+      "FileFunction": "Copper,L1,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "motor_controller-In1_Cu G_Plane (L2).gbr",
+      "FileFunction": "Copper,L5,Inr",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "motor_controller-In2_Cu P_Plane (L3).gbr",
+      "FileFunction": "Copper,L7,Inr",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "motor_controller-B_Cu.gbr",
+      "FileFunction": "Copper,L4,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "motor_controller-F_Paste.gbr",
+      "FileFunction": "SolderPaste,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "motor_controller-B_Paste.gbr",
+      "FileFunction": "SolderPaste,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "motor_controller-F_Silkscreen.gbr",
+      "FileFunction": "Legend,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "motor_controller-B_Silkscreen.gbr",
+      "FileFunction": "Legend,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "motor_controller-F_Mask.gbr",
+      "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "motor_controller-B_Mask.gbr",
+      "FileFunction": "SolderMask,Bot",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "motor_controller-Edge_Cuts.gbr",
+      "FileFunction": "Profile",
+      "FilePolarity": "Positive"
+    }
+  ],
+  "MaterialStackup": [
+    {
+      "Type": "Legend",
+      "Name": "Top Silk Screen"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Top Solder Paste"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.01,
+      "Name": "Top Solder Mask"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "F.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 0.1,
+      "Material": "FR4",
+      "Name": "F.Cu/In1.Cu G_Plane (L2)",
+      "Notes": "Type: dielectric layer 1 (from F.Cu to In1.Cu G_Plane (L2))"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "In1.Cu G_Plane (L2)"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 1.24,
+      "Material": "FR4",
+      "Name": "In1.Cu G_Plane (L2)/In2.Cu P_Plane (L3)",
+      "Notes": "Type: dielectric layer 2 (from In1.Cu G_Plane (L2) to In2.Cu P_Plane (L3))"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "In2.Cu P_Plane (L3)"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 0.1,
+      "Material": "FR4",
+      "Name": "In2.Cu P_Plane (L3)/B.Cu",
+      "Notes": "Type: dielectric layer 3 (from In2.Cu P_Plane (L3) to B.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "B.Cu"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.01,
+      "Name": "Bottom Solder Mask"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Bottom Solder Paste"
+    },
+    {
+      "Type": "Legend",
+      "Name": "Bottom Silk Screen"
+    }
+  ]
+}
