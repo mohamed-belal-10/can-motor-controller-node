@@ -62,6 +62,52 @@ their own, which would silently change the bus's effective pull-up value).
 
 ---
 
+## Gallery
+
+### Main board — `motor_controller`
+
+<table>
+<tr>
+<td width="50%">
+
+**PCB layout** (KiCad, top copper + silkscreen)
+
+<img src="hardware/motor_controller/PCB_design.png" alt="motor_controller PCB layout" width="100%">
+
+</td>
+<td width="50%">
+
+**3D render**
+
+<img src="hardware/motor_controller/hardware_design.png" alt="motor_controller 3D render" width="100%">
+
+</td>
+</tr>
+</table>
+
+### Sub-board — `AS5600_Encoder_Node`
+
+<table>
+<tr>
+<td width="50%">
+
+**PCB layout**
+
+<img src="hardware/AS5600_Encoder_Node/PCB_design.png" alt="AS5600_Encoder_Node PCB layout" width="100%">
+
+</td>
+<td width="50%">
+
+**3D render**
+
+<img src="hardware/AS5600_Encoder_Node/hardware_design.png" alt="AS5600_Encoder_Node 3D render" width="100%">
+
+</td>
+</tr>
+</table>
+
+---
+
 ## Repository structure
 
 ```
@@ -74,11 +120,15 @@ their own, which would silently change the bus's effective pull-up value).
 └── hardware/
     ├── motor_controller/                       Main CAN motor controller node
     │   ├── motor_controller.kicad_pro/.kicad_sch/.kicad_pcb/.kicad_prl
+    │   ├── PCB_design.png                          PCB layout screenshot
+    │   ├── hardware_design.png                     3D render
     │   └── manufacturing/
     │       ├── gerbers/                            Gerber + drill files
     │       └── motor_controller-gerbers.zip         Fab-ready zip (JLCPCB format)
     └── AS5600_Encoder_Node/                    AS5600 magnetic encoder sub-PCB
         ├── AS5600_Encoder_Node.kicad_pro/.kicad_sch/.kicad_pcb/.kicad_prl
+        ├── PCB_design.png                          PCB layout screenshot
+        ├── hardware_design.png                     3D render
         └── manufacturing/
             ├── gerbers/
             └── AS5600_Encoder_Node-gerbers.zip
