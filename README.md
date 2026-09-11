@@ -70,15 +70,13 @@ their own, which would silently change the bus's effective pull-up value).
 ├── LICENSE
 ├── docs/                                       Design documentation
 │   ├── CAN_Motor_Controller_Node_Spec.md           Full BOM, design decisions, CAN protocol, pin map
-│   ├── CAN_Motor_Controller_Node_PCB_Layout_Guidelines.md   Placement, routing, plane strategy, DRC targets
-│   └── EMC_review_2026-08-27.md                    Pre-compliance EMC audit (FCC Part 15 Class B)
+│   └── CAN_Motor_Controller_Node_PCB_Layout_Guidelines.md   Placement, routing, plane strategy, DRC targets
 └── hardware/
     ├── motor_controller/                       Main CAN motor controller node
     │   ├── motor_controller.kicad_pro/.kicad_sch/.kicad_pcb/.kicad_prl
-    │   ├── manufacturing/
-    │   │   ├── gerbers/                            Gerber + drill files
-    │   │   └── motor_controller-gerbers.zip         Fab-ready zip (JLCPCB format)
-    │   └── analysis/                            EMC pre-compliance tool output (raw JSON)
+    │   └── manufacturing/
+    │       ├── gerbers/                            Gerber + drill files
+    │       └── motor_controller-gerbers.zip         Fab-ready zip (JLCPCB format)
     └── AS5600_Encoder_Node/                    AS5600 magnetic encoder sub-PCB
         ├── AS5600_Encoder_Node.kicad_pro/.kicad_sch/.kicad_pcb/.kicad_prl
         └── manufacturing/
@@ -129,13 +127,6 @@ board.
 - ✅ Every component value and part number closed, across four audit passes
   (full history in [`docs/CAN_Motor_Controller_Node_Spec.md`](docs/CAN_Motor_Controller_Node_Spec.md)).
 - ✅ Layout complete; gerbers generated (see `manufacturing/`).
-- ⚠️ **EMC pre-compliance review run** ([`docs/EMC_review_2026-08-27.md`](docs/EMC_review_2026-08-27.md),
-  FCC Part 15 Class B target) — risk score 49/100, 7 must-fix findings
-  (I²C/control signals referencing the wrong plane on B.Cu, missing buck
-  decoupling, ground-plane voids under motor-output traces, missing ground
-  stitching at layer transitions, an unconnected VSS ground domain). **Not
-  yet re-laid-out to address these** — treat the current gerbers as
-  pre-EMC-fix.
 - ⚠️ **Flagged, unresolved:** DRV8874 power-up sequencing (VCC vs. VM order)
   not verified against the datasheet.
 - ⚠️ **Open before re-ordering:** cross-check the main board's AS5600 link
@@ -176,7 +167,6 @@ hand to confirm dimensions.
 |---|---|
 | [`docs/CAN_Motor_Controller_Node_Spec.md`](docs/CAN_Motor_Controller_Node_Spec.md) | Full BOM with sourcing/pricing notes, design-decision rationale, CAN protocol definition, STM32 pin assignment tracker, CAN-adapter companion tool, AS5600 mounting bracket spec |
 | [`docs/CAN_Motor_Controller_Node_PCB_Layout_Guidelines.md`](docs/CAN_Motor_Controller_Node_PCB_Layout_Guidelines.md) | Trace sizing, via strategy, floorplan, placement rules, ground/power plane strategy, CAN routing, thermal, DRC targets, pre-routing checklist |
-| [`docs/EMC_review_2026-08-27.md`](docs/EMC_review_2026-08-27.md) | Automated EMC pre-compliance audit against FCC Part 15 Class B — must-fix / should-fix / nice-to-have findings |
 
 ---
 
@@ -184,7 +174,7 @@ hand to confirm dimensions.
 
 1. Schematic capture (CAN node + power stage + DRV8874 + AS5600) — **done**
 2. ERC clean — **done**
-3. Layout — **done**, EMC must-fix items outstanding
+3. Layout — **done**
 4. DRC clean, JLCPCB stackup check, order
 5. Bring-up: power rails → CAN enumeration → AS5600 sanity read → close current loop → speed loop → position loop
 6. Bring up the companion CAN-USB adapter and drive the node from a laptop with real command/telemetry frames
