@@ -208,6 +208,11 @@ change rather than editing the checked-in gerbers by hand.
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE). Hardware design files are provided as-is;
-verify independently before building anything that handles real motor
-current or connects to a shared bus.
+MIT — see [`LICENSE`](LICENSE).
+
+This repository contains PCB hardware design files (KiCad schematics,
+layouts, and manufacturing outputs) alongside documentation. The MIT License
+is applied for simplicity and consistency with the author's other portfolio
+repositories; no warranty is made or implied about the fitness of any
+hardware design herein for use with live mains, high-current, or
+safety-critical applications. Build and operate at your own risk.

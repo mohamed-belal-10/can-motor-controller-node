@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Note: this repository contains PCB hardware design files (KiCad schematics,
-layouts, and manufacturing outputs) alongside documentation. The MIT License
-is applied here for simplicity and consistency with the author's other
-portfolio repositories; no warranty is made or implied about the fitness of
-any hardware design herein for use with live mains, high-current, or
-safety-critical applications. Build and operate at your own risk.
